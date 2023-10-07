@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $WATER $STIR | awk '{ split("ewat.r", a, ""); split("sti.r", b, ""); for(i=1;i<=length($1);i++) w+=index("ewat.r", substr($1, i, 1))-1; for(i=1;i<=length($2);i++) s+=index("sti.r", substr($2, i, 1))-1; sum=w+s; chars="bestchol"; while(sum){result=substr(chars, sum%length(chars)+1, 1) result; sum=int(sum/length(chars));} print result}'
